@@ -1,0 +1,70 @@
+{
+  "city_name": "Calabar",
+
+  "construction_data": {
+    "building_types": {
+      
+      "storey_building": {
+        "basic_finish_per_sqm": {
+          "min": 250000,
+          "max": 500000
+        },
+        "standard_finish_per_sqm": {
+          "min": 500000,
+          "max": 1000000
+        },
+        "high_end_finish_per_sqm": {
+          "min": 1000000,
+          "max": 2000000
+        }
+      },
+
+      "bungalow_2_bedroom": {
+        "cost_per_sqm": {
+          "min": 80000,
+          "max": 100000
+        }
+      },
+
+      "bungalow_3_bedroom": {
+        "cost_per_sqm": {
+          "min": 110000,
+          "max": 120000
+        }
+      },
+
+      "bungalow_4_bedroom": {
+        "cost_per_sqm": {
+          "min": 110000,
+          "max": 120000
+        }
+      },
+
+      "duplex_maisonette": {
+        "cost_per_sqm": {
+          "min": 250000,
+          "max": 300000
+        }
+      }
+    },
+
+    "external_works": {
+      "paved_courtyard_per_sqm": 135000,
+      "interlocking_per_sqm": 11500,
+      "increte_pavement_per_sqm": 22500,
+
+      "fence_wall_with_concertina_per_meter": {
+        "min": 55000,
+        "max": 75000
+      }
+    },
+
+    "services": {
+      "soakaway_septic": {
+        "dimensions_m": "3.6 x 1.5 x 2.2",
+        "total_cost": 2250000,
+        "derived_cost_per_sqm": 416666
+      }
+    }
+  }
+}
