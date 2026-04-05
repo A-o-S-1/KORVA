@@ -1,0 +1,95 @@
+#valuation_ctrl
+
+"valuation_control:": {
+    "valuation_mode": "fresh | revaluation",
+    "purpose": "Sale | Morrtgage | Insurance | Investment | Advisory",
+    "valuation_date": "",
+    "inspection_date": "",
+    "value_id": ""
+}
+
+#property_id
+
+"property_identification": {
+    "property_type": "Residential | Commercial | Land | Mixed-use",
+    "property_subtype": "Duplex | Bungalow | Flat | Office | Shop | Warehouse | Land",
+    "property_use": "Owner-occupied | Rental | Vacant | Under-development",
+    "ternure": "Freehold | Leasehold",
+    "intrested": "Entire | Partial"
+}
+
+#location
+"location": {
+  "city": "Lagos | Abuja | Calabar",
+  "area": "",
+  "neighborhood_class": "Prime | متوسط | Developing",
+  "distance_to_cbd_km": "",
+  "road_access": "Tarred | Untarred | Partially Tarred",
+  "traffic": "Light | Moderate | Heavy"
+}
+
+#land
+"land": {
+  "size_sqm": "",
+  "plot_type": "Regular | Corner Piece | Irregular",
+  "topography": "Flat | Sloping | Uneven",
+  "title": "C_of_O | Governor Consent | Deed | Customary",
+  "fencing": "Yes | No"
+}
+
+#building
+"building": {
+  "exists": true,
+  "number_of_floors": "",
+  "floor_area_sqm": "",
+  "construction_type": "Concrete | Block | Mixed",
+  "condition": "Excellent | Good | Fair | Poor",
+  "finish_level": "Basic | Standard | Luxury",
+  "age_years": ""
+}
+
+#config
+"configuration": {
+  "bedrooms": "",
+  "bathrooms": "",
+  "toilets": "",
+  "units": "",
+  "parking_spaces": ""
+}
+
+#extras
+"extras": {
+  "paved_courtyard_sqm": "",
+  "interlocking_sqm": "",
+  "fence_length_m": "",
+  "has_soakaway": true,
+  "has_borehole": true
+}
+
+#market
+"market": {
+  "known_sale_price": "",
+  "comparable_sales": [
+    {
+      "price": "",
+      "location": ""
+    }
+  ],
+  "monthly_rent": "",
+  "occupancy_rate": ""
+}
+
+#dev
+"development": {
+  "proposed_use": "",
+  "estimated_build_cost": "",
+  "expected_sale_value": "",
+  "timeline_months": ""
+}
+
+#v_n
+"valuer_notes": {
+  "neighborhood_trend": "Growing | Stable | Declining",
+  "risk_factors": "",
+  "special_features": ""
+}

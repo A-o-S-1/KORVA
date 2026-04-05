@@ -1,0 +1,33 @@
+{
+  "city": "Calabar",
+
+  "construction": {
+    "storey_building": {
+      "basic": { "min": 250000, "max": 500000 },
+      "standard": { "min": 500000, "max": 1000000 },
+      "luxury": { "min": 1000000, "max": 2000000 }
+    },
+
+    "bungalow": {
+      "2_bedroom": { "min": 80000, "max": 100000 },
+      "3_bedroom": { "min": 110000, "max": 120000 },
+      "4_bedroom": { "min": 110000, "max": 120000 }
+    },
+
+     "duplex": {
+      "min": 250000,
+      "max": 300000
+    }
+  },
+
+  "external_works": {
+    "paved_courtyard": 135000,
+    "interlocking": 11500,
+    "increte": 22500,
+    "fence_wall": { "min": 55000, "max": 75000 }
+  },
+
+  "services": {
+    "soakaway": 2250000
+  }
+}
