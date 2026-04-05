@@ -22,6 +22,29 @@ def calculate_building_cost(data, property_input):
 
     cost_per_sqm = 0 # Initialize cost per sqm
 
-     # 🔸 Duplex
-     if property_type == "duplex":
+    # 🔸 Duplex
+    if property_type == "duplex":
        min_val = construction_data["duplex"]["min"]
+       max_val = construction_data["duplex"]["max"]
+       cost_per_sqm = get_average(min_val, max_val)
+
+    # 🔸 Bungalow
+    elif property_type == "bungalow":
+        subtype = property_input["bedroom_type"] # e.g. 3_bedroom
+        min_val = construction_data["bungalow"][subtype]["min"]
+        max_val = construction_data["bungalow"][subtype]["max"]
+        cost_per_sqm = get_average(min_val, max_val)
+
+    # 🔸 Storey building
+    elif property_type == "storey":
+        min_val = construction_data["storey_building"][finish]["min"]
+        max_val = construction_data["storey_building"][finish]["max"]
+        cost_per_sqm = get_average(min_val, max_val)
+
+    # 🔹 Total building cost
+    total_cost = cost_per_sqm * floor_area
+
+    return total_cost, cost_per_sqm
+
+# 🔹 Calculate external works
+def  
