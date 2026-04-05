@@ -47,4 +47,50 @@ def calculate_building_cost(data, property_input):
     return total_cost, cost_per_sqm
 
 # 🔹 Calculate external works
-def  
+def calculate_external_works(data, property_input):
+   ext = data["external_works"]
+
+   total = 0  # Initialize total cost
+
+   # Pavement
+   if property_input.get("paved_courtyard_sqm"):
+       total += property_input["paved_courtyard_sqm"] * ext["paved_courtyard"]
+
+   # Fence
+   if property_input.get("fence_lenght_m"):
+       min_val = ext["fence_wall"]["min"]
+       max_val = ext["fence_wall"]["max"]
+       avg = get_average(min_val, max_val)
+       total += property_input["fence_lenght_m"] * avg
+
+   return total
+
+# 🔹 Calculate services cost
+def calculate_services(data, property_input):
+
+    # Soakaway
+    if property_input.get("has_soakaway"):
+        total += data["services"]["soakaway"]
+
+    return total
+
+# 🔹 Main valuation function
+def run_valuation(property_input):
+    data = load_market_data()   # Load market data
+
+    # Calculate different components
+    building_cost, rate = calculate_building_cost(data, property_input)
+    external_cost = calculate_external_works(data, property_input)
+    service_cost = calculate_services(data, property_input)
+
+    # Total cost
+    total_cost = building_cost + external_cost + service_cost
+
+    # Return structured result
+    return {
+        "building_cost": building_cost,
+        "external_cost": external_cost,
+        "service_cost": service_cost,
+        "rate_per_sqm": rate,
+        "total_estimated_cost": total_cost
+    }

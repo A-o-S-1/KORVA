@@ -1,0 +1,83 @@
+"valuation_control": {
+  "valuation_mode": "fresh | revaluation",
+  "purpose": "Sale | Mortgage | Insurance | Investment | Advisory",
+  "valuation_date": "",
+  "inspection_date": "",
+  "valuer_id": ""
+}
+
+"property_identification": {
+  "property_type": "Residential | Commercial | Land | Mixed-Use",
+  "property_subtype": "Duplex | Bungalow | Flat | Office | Shop | Warehouse | Land",
+  "property_use": "Owner-Occupied | Rental | Vacant | Under Development",
+  "tenure": "Freehold | Leasehold",
+  "interest_valued": "Entire | Partial"
+}
+
+"location": {
+  "city": "Lagos | Abuja | Calabar",
+  "area": "",
+  "neighborhood_class": "Prime | ????? | Developing",
+  "distance_to_cbd_km": "",
+  "road_access": "Tarred | Untarred | Partially Tarred",
+  "traffic": "Light | Moderate | Heavy"
+}
+
+"land": {
+  "size_sqm": "",
+  "plot_type": "Regular | Corner Piece | Irregular",
+  "topography": "Flat | Sloping | Uneven",
+  "title": "C_of_O | Governor Consent | Deed | Customary",
+  "fencing": "Yes | No"
+}
+
+"building": {
+  "exists": true,
+  "number_of_floors": "",
+  "floor_area_sqm": "",
+  "construction_type": "Concrete | Block | Mixed",
+  "condition": "Excellent | Good | Fair | Poor",
+  "finish_level": "Basic | Standard | Luxury",
+  "age_years": ""
+}
+
+"configuration": {
+  "bedrooms": "",
+  "bathrooms": "",
+  "toilets": "",
+  "units": "",
+  "parking_spaces": ""
+}
+
+"extras": {
+  "paved_courtyard_sqm": "",
+  "interlocking_sqm": "",
+  "fence_length_m": "",
+  "has_soakaway": true,
+  "has_borehole": true
+}
+
+"market": {
+  "known_sale_price": "",
+  "comparable_sales": [
+    {
+      "price": "",
+      "location": ""
+    }
+  ],
+  "monthly_rent": "",
+  "occupancy_rate": ""
+}
+
+"development": {
+  "proposed_use": "",
+  "estimated_build_cost": "",
+  "expected_sale_value": "",
+  "timeline_months": ""
+}
+
+"valuer_notes": {
+  "neighborhood_trend": "Growing | Stable | Declining",
+  "risk_factors": "",
+  "special_features": ""
+}
