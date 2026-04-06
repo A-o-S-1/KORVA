@@ -1,10 +1,18 @@
 import json # Used to load JSON data filed
+import os  # Used to handle file paths reliably across different operating systems
 
 # 🔹 Load market data (Calabar)
 def load_market_data():
-    # Open the JSOn file containing market data
-    with open("../data/calabar_data.json", "r") as file:
-        data = json.load(file) # Convert Json to python dictionary
+    # 🔹 Get the absolute path of the current file (valuation_engine.py)
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+     # 🔹 Build a reliable path to the data file
+    data_path = os.path.join(BASE_DIR, "data", "calabar_data.json")
+
+    # 🔹 Open the JSON file using the correct path
+    with open(data_path, "r") as file:
+        data = json.load(file)
+
     return data
 
 # 🔹 Get average from range
