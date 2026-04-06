@@ -3,13 +3,16 @@ import os  # Used to handle file paths reliably across different operating syste
 
 # 🔹 Load market data (Calabar)
 def load_market_data():
-    # 🔹 Get the absolute path of the current file (valuation_engine.py)
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    
-     # 🔹 Build a reliable path to the data file
-    data_path = os.path.join(BASE_DIR, "data", "calabar_data.json")
+    # 🔹 Get current file directory (engine folder)
+    base_dir = os.path.dirname(__file__)
 
-    # 🔹 Open the JSON file using the correct path
+    # 🔹 Build correct path to market data
+    data_path = os.path.join(base_dir, "../data/market/calabar_data.json")
+
+    # 🔹 Normalize path (important for Windows)
+    data_path = os.path.abspath(data_path)
+
+    # 🔹 Open file
     with open(data_path, "r") as file:
         data = json.load(file)
 

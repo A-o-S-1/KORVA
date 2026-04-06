@@ -23,13 +23,13 @@ def parse_property(raw_data):
         bedroom_type = "3_bedroom" # default fallback
 
     # 🔸 Extract sqm (convert string to int)
-    floor_area = int(subject["Sqm"])
+    floor_area = int(subject["Sqm"]) # (Total Square meters that is plus the building if any)"
 
     # 🔸 Default finish (can improve later)
     finish = "standard"
 
     # 🔸 External works detection
-    amemities = subject["Amenities in the property"].lower()
+    amemities = subject["Amenities in that property"].lower()
 
     has_fence = "fence" in amemities
     has_borehole = "borehole" in amemities

@@ -3,7 +3,7 @@ from engine.valuation_engine import run_valuation
 from engine.parser import parse_property # 🔥 new import
 
 # 🔹 Load property file
-with open("data/properties/state_housing_estate/property_1_residential_duplex.json", "r") as file:
+with open("data/properties/marian_N_U_Iso_road/property_4_mixed_use.json", "r") as file:
     raw_data = json.load(file)
 
 # 🔹 Convert raw data → engine format

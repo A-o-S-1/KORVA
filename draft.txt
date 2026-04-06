@@ -81,3 +81,43 @@
   "risk_factors": "",
   "special_features": ""
 }
+
+# for state housing:
+=== SVIS VALUATION RESULT ===
+Building Cost: ₦165,000,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦275,000
+Total Cost: ₦167,250,000
+
+
+# for satellite town:
+=== SVIS VALUATION RESULT ===
+Building Cost: ₦51,750,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦115,000
+Total Cost: ₦54,000,000
+
+# for marian
+=== SVIS VALUATION RESULT(Prop_5) ===
+Building Cost: ₦46,000,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦115,000
+Total Cost: ₦48,250,000
+
+=== SVIS VALUATION RESULT(Prop_4) ===
+Building Cost: ₦80,500,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦115,000
+Total Cost: ₦82,750,000
+
+
+
+Something isn't right with the calcualation no external works for the whole  property
+Also, i can not always be going to the backend to change property file names in other to run test
+we need to automate that process when the process starts there should be option to choose which 
+properties we want to test run. Here are the results from the last test run:
+
