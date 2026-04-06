@@ -82,6 +82,10 @@
   "special_features": ""
 }
 
+cmd
+cd Desktop\KORVA
+python main.py
+
 # for state housing:
 === SVIS VALUATION RESULT ===
 Building Cost: ₦165,000,000
