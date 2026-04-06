@@ -75,12 +75,13 @@ def calculate_external_works(data, property_input):
 
 # 🔹 Calculate services cost
 def calculate_services(data, property_input):
+    total = 0  # 🔹 Initialize total BEFORE using it
 
     # Soakaway
     if property_input.get("has_soakaway"):
         total += data["services"]["soakaway"]
 
-    return total
+    return total # 🔹 Always return the value
 
 # 🔹 Main valuation function
 def run_valuation(property_input):
