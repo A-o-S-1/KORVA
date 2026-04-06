@@ -1,15 +1,10 @@
+import json
 from engine.valuation_engine import run_valuation
 
-# 🔹 Sample property input
-property_input = {
-    "property_type": "duplex",
-    "floor_area_sqm": 300,
-    "finish_level": "standard",
+# 🔹 Load property file
+with open("data/properties/State Housing Estate/Property 1 (Residential Duplex).json", "r") as file:
+    property_input = json.load(file)
 
-    "paved_courtyard_sqm": 120,
-    "fence_length_m": 80,
-    "has_soakaway": True
-}
 # 🔹 Run valuation
 result = run_valuation(property_input)
 
