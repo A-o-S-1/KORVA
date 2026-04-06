@@ -1,0 +1,17 @@
+{
+  "subject": {
+    "Description of property": "Block of 6 flats (2-bedroom units)",
+    "Location of Property": "Ekorinim 2, Calabar Municipality, Cross River State, Nigeria",
+    "Sqm": "650",
+    "Distance from CBD (Central Business district) in Km": "6",
+    "Access road is tarred or not": "Partially tarred",
+    "Amenities in that property": "Electricity, borehole, parking, fenced compound",
+    "Price of Surrounding properties": "₦55,000,000 for similar property, ₦50,000,000 for older structure",
+    "Rental Information": {
+      "Number of Units": "6",
+      "Annual Rent Per Unit": "₦600,000",
+      "Estimated Occupancy Rate": "90%"
+    },
+    "Date Data Was Collected": "March 2026"
+  }
+}

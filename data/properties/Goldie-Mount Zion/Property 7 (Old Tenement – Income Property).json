@@ -1,0 +1,17 @@
+{
+  "subject": {
+    "Description of property": "Old tenement building with 8 single-room units",
+    "Location of Property": "Mount Zion Area, Calabar South, Cross River State, Nigeria",
+    "Sqm": "500",
+    "Distance from CBD (Central Business district) in Km": "2",
+    "Access road is tarred or not": "Tarred",
+    "Amenities in that property": "Electricity, shared sanitation, basic water supply",
+    "Price of Surrounding properties": "₦25,000,000 for similar tenement, ₦30,000,000 for upgraded version",
+    "Rental Information": {
+      "Number of Units": "8",
+      "Annual Rent Per Unit": "₦180,000",
+      "Estimated Occupancy Rate": "95%"
+    },
+    "Date Data Was Collected": "March 2026"
+  }
+}

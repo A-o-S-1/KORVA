@@ -1,0 +1,17 @@
+{
+  "subject": {
+    "Description of property": "3-bedroom bungalow on full plot",
+    "Location of Property": "Satellite Town, Calabar South, Cross River State, Nigeria",
+    "Sqm": "450",
+    "Distance from CBD (Central Business district) in Km": "8",
+    "Access road is tarred or not": "Untarred",
+    "Amenities in that property": "Electricity, borehole, fenced compound",
+    "Price of Surrounding properties": "₦18,000,000 for similar bungalow, ₦22,000,000 for newer building",
+    "Rental Information": {
+      "Number of Units": "1",
+      "Annual Rent Per Unit": "₦500,000",
+      "Estimated Occupancy Rate": "85%"
+    },
+    "Date Data Was Collected": "March 2026"
+  }
+}
