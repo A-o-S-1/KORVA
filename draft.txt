@@ -1,4 +1,4 @@
-"valuation_control": {
+﻿"valuation_control": {
   "valuation_mode": "fresh | revaluation",
   "purpose": "Sale | Mortgage | Insurance | Investment | Advisory",
   "valuation_date": "",
@@ -87,12 +87,26 @@ cd Desktop\KORVA
 python main.py
 
 # for state housing:
-=== SVIS VALUATION RESULT ===
+=== SVIS VALUATION RESULT(Prop_1) ===
 Building Cost: ₦165,000,000
 External Works: ₦0
 Services Cost: ₦2,250,000
 Rate per sqm: ₦275,000
 Total Cost: ₦167,250,000
+
+=== SVIS VALUATION RESULT(Prop_2) ===
+Building Cost: ₦92,000,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦115,000
+Total Cost: ₦94,250,000
+
+=== SVIS VALUATION RESULT(Prop_3-Bare_Land) ===
+Building Cost: ₦137,500,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦275,000
+Total Cost: ₦139,750,000
 
 
 # for satellite town:
@@ -118,10 +132,230 @@ Services Cost: ₦2,250,000
 Rate per sqm: ₦115,000
 Total Cost: ₦82,750,000
 
+# for ekorinim 1&2
+=== SVIS VALUATION RESULT ===
+Building Cost: ₦58,500,000
+External Works: ₦13,500,000
+Services Cost: ₦2,250,000
+Rate per sqm: ₦90,000
+Total Cost: ₦74,250,000
+
+# for goldie/mount zion
+=== SVIS VALUATION RESULT ===
+Building Cost: ₦57,500,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦115,000
+Total Cost: ₦59,750,000
+
+# for henshaw # duke town
+=== SVIS VALUATION RESULT ===
+Building Cost: ₦34,500,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Rate per sqm: ₦115,000
+Total Cost: ₦36,750,000
+
+#
 
 
 Something isn't right with the calcualation no external works for the whole  property
 Also, i can not always be going to the backend to change property file names in other to run test
 we need to automate that process when the process starts there should be option to choose which 
-properties we want to test run. Here are the results from the last test run:
+properties we want to test run. Here are the results from the last test runs:
+
+
+
+next issue sorry i need this project to be somewhat flawless here's is a logic how come a vacant land is more expensive that a developed land with a property siting on it:
+
+
+
+
+
+here is the result for all properties, i think at this point is where we need  an AI API so it can help diferentiate what property to values and how to value it properly
+
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:9
+
+=== SVIS VALUATION RESULT ===
+Method Used: cost
+Building Cost: ₦137,500,000
+External Works: ₦0
+Services Cost: ₦2,250,000
+Comparative Value: ₦13,750,250
+Final Value: ₦89,350,100
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:8
+
+=== SVIS VALUATION RESULT ===
+Method Used: investment
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:7
+
+=== SVIS VALUATION RESULT ===
+Method Used: cost
+Building Cost: ₦165,000,000
+External Works: ₦13,500,000
+Services Cost: ₦2,250,000
+Comparative Value: ₦45,000,300
+Final Value: ₦126,450,120
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:6
+
+=== SVIS VALUATION RESULT ===
+Method Used: cost
+Building Cost: ₦51,750,000
+External Works: ₦18,700,000
+Services Cost: ₦2,250,000
+Comparative Value: ₦20,000,000
+Final Value: ₦51,620,000
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:5
+
+=== SVIS VALUATION RESULT ===
+Method Used: investment
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:4
+
+=== SVIS VALUATION RESULT ===
+Method Used: investment
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:3
+
+=== SVIS VALUATION RESULT ===
+Method Used: investment
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:2
+
+=== SVIS VALUATION RESULT ===
+Method Used: investment
+
+C:\Users\ST.CATH WC OGOJA\Desktop\KORVA>python main.py
+
+=== SELECT PROPERTY TO TEST ===
+
+1. ekorinim_1_2 → property_6_block_of_flats.json
+2. goldie_mount_zion → property_7_tenement_income.json
+3. henshaw_duke_town → property_9_market_property.json
+4. marian_N_U_Iso_road → property_4_mixed_use.json
+5. marian_N_U_Iso_road → property_5_retail_block.json
+6. satellite_town → property_8_bungalow.json
+7. state_housing_estate → property_1_residential_duplex.json
+8. state_housing_estate → property_2_office_block.json
+9. state_housing_estate → property_3_bare_land.json
+
+Enter number:1
+
+=== SVIS VALUATION RESULT ===
+Method Used: investment
 

@@ -29,11 +29,18 @@ def parse_property(raw_data):
     finish = "standard"
 
     # 🔸 External works detection
-    amemities = subject["Amenities in that property"].lower()
+    amenities = subject["Amenities in that property"].lower()
 
-    has_fence = "fence" in amemities
-    has_borehole = "borehole" in amemities
-    
+    paved_area = 0
+    fence_length = 0
+
+    # Basic Assumption (can be refined later)
+    if "fenced" in amenities:
+        fence_length = 80 # default estimate (can be proved later)
+
+    if "compound" in amenities or "paved" in amenities:
+        paved_area = 100 # default estimate (can be proved later)
+
      # 🔹 Return clean structure for engine
     return {
         "property_type": property_type,
@@ -42,7 +49,7 @@ def parse_property(raw_data):
         "finish_level": finish,
 
         # extras (optional for now)
-        "paved_courtyard_sqm": 0, # Placeholder, can extract from description if needed
-        "fence_lenght_m": 0, # Placeholder, can extract from description if needed
+        "paved_courtyard_sqm": paved_area, # Placeholder, can extract from description if needed
+        "fence_length_m": fence_length, # Placeholder, can extract from description if needed
         "has_soakaway": True # assume true for now
     } 

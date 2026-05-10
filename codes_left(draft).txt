@@ -1,0 +1,160 @@
+﻿# 📊 Comparative Method
+
+def calculate_comparative_value(raw_data):
+    subject = raw_data["subject"]
+    import re
+
+    price_data = subject.get("Price of Surrounding properties", "")
+    prices = re.findall(r"\d[\d,]*", price_data)
+
+    if not prices:
+        return None
+
+    prices = [int(p.replace(",", "")) for p in prices]
+    return sum(prices) / len(prices)
+
+
+# 🏗️ Residual Method
+
+def calculate_residual_value(cost_value):
+    developer_margin = 0.25
+    return cost_value * (1 - developer_margin)
+
+
+
+
+# 🔧 Market Adjustment
+
+def apply_market_adjustment(cost_value, comparative_value):
+    if comparative_value:
+        return (cost_value * 0.6) + (comparative_value * 0.4)
+    return cost_value
+
+
+
+
+# 🔹 5. METHOD SELECTOR
+def select_valuation_method(raw_data):
+    desc = raw_data["subject"]["Description of property"].lower()
+
+    if any(x in desc for x in ["flat", "tenement", "shop", "office", "commercial"]):
+        return "investment"
+
+    if "land" in desc:
+        return "residual"
+
+    return "cost"
+
+
+# MAIN ENGINE FUNCTION (VERY IMPORTANT)
+
+Replace your current run_valuation() with this:
+
+def run_valuation(property_input, raw_data):
+    data = load_market_data()
+
+    method = select_valuation_method(raw_data)
+
+    # 🔹 COST BASE
+    building_cost, rate = calculate_building_cost(data, property_input)
+    external_cost = calculate_external_works(data, property_input)
+    service_cost = calculate_services(data, property_input)
+
+    cost_total = building_cost + external_cost + service_cost
+
+    # 🔹 OTHER METHODS
+    investment_value = calculate_investment_value(raw_data)
+    comparative_value = calculate_comparative_value(raw_data)
+
+    # 🔥 FINAL DECISION
+    if method == "investment" and investment_value:
+        final_value = investment_value
+
+    elif method == "residual":
+        final_value = calculate_residual_value(cost_total)
+
+    else:
+        final_value = apply_market_adjustment(cost_total, comparative_value)
+
+    return {
+        "method_used": method,
+        "cost_value": cost_total,
+        "investment_value": investment_value,
+        "comparative_value": comparative_value,
+        "final_value": final_value
+    }
+
+
+
+       🔹 OTHER METHODS
+    
+    comparative_value = calculate_comparative_value(raw_data)
+    residual_value = calculate_residual_value(cost_total)
+
+
+                # 🔥 FINAL DECISION
+    if method == "investment" and investment_value:
+        final_value = investment_value
+
+    elif method == "residual":
+        final_value = calculate_residual_value(cost_total)
+
+    else:
+        final_value = apply_market_adjustment(cost_total, comparative_value)
+
+
+    # Return structured result
+    return {
+        "method_used": method,
+        "cost_value": cost_total,
+        "investment_value": investment_value,
+        "comparative_value": comparative_value,
+        "residual_value": residual_value,
+        "final_value": final_value
+    }#
+
+# 🔹 Comparative Method
+def calculate_comparative_value(raw_data):
+
+    subject = raw_data["subject"]
+
+    # 🔹 Get surrounding property prices
+    price_data = subject.get(
+        "Price of Surrounding properties",
+        ""
+    )
+
+    # 🔹 Extract prices properly
+    prices = re.findall(
+        r"₦?\d[\d,]*",
+        price_data
+    )
+
+    # 🔹 No comparable data found
+    if not prices:
+        return None
+
+    # 🔹 Clean extracted prices
+    cleaned_prices = []
+
+    for p in prices:
+
+        p = (
+            str(p)
+            .replace("₦", "")
+            .replace(",", "")
+            .strip()
+        )
+
+        cleaned_prices.append(int(p))
+
+    # 🔹 Calculate average comparable value
+    average_price = (
+        sum(cleaned_prices)
+        / len(cleaned_prices)
+    )
+
+    return average_price
+
+
+

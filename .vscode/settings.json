@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.shellIntegration.quickFixEnabled": true,
+    "terminal.integrated.defaultProfile.linux": ""
+}
